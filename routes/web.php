@@ -22,5 +22,5 @@ Route::get('/coches', [CochesController::class, 'index'])->name('index');
 
 Route::get('/coches/{idMatricula}', [CochesController::class, 'show'])->name('coches');
 
-Route::post('/crearCoche', [CochesController::class, 'show'])->name('crearCoche');
+Route::post('/crearCoche', [CochesController::class, 'create'])->name('crearCoche');
 

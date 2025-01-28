@@ -17,6 +17,7 @@
             <input type="text" placeholder="Modelo" name="modelo" required>
             <input type="text" placeholder="Matricula" name="matricula" required>
             <input type="text" placeholder="Dueño" name="owner" required>
+            <input type="submit">
         </form>
     </div>
     <div>

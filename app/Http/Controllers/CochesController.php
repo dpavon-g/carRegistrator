@@ -19,9 +19,19 @@ class CochesController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(request $request)
     {
-        //
+        $request->validate([
+            'marca' => 'required|string|max:255',
+            'modelo' => 'required|string|max:255',
+            'matricula' => 'required|string|max:255',
+            'owner' => 'required|string|max:255',
+        ]);
+
+        Coche::create($request->all());
+
+        $coches = Coche::all();
+        return view('coches', compact('coches'));
     }
 
     /**
