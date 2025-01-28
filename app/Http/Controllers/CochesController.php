@@ -35,10 +35,10 @@ class CochesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $idMatricula)
     {
-        $coches = array();
-        return view('coches', compact('coches'));
+        $coche = Coche::findOrFail($idMatricula);
+        return view('infoCoche', compact('coche'));
     }
 
     /**

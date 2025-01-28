@@ -18,8 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/coches', [CochesController::class, 'index']);
+Route::get('/coches', [CochesController::class, 'index'])->name('index');
+
 Route::get('/coches/{idMatricula}', [CochesController::class, 'show'])->name('coches');
 
-
+Route::post('/crearCoche', [CochesController::class, 'show'])->name('crearCoche');
 
