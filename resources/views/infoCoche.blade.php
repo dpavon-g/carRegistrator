@@ -20,5 +20,10 @@
     <div>
         <a href="{{ route('index') }}">Volver</a>
     </div>
+    <form method="POST" action="{{ route('deleteCoche', ['id' => $coche->id]) }}">
+        @csrf
+        @method('DELETE')
+        <input type="submit" value="Borrar">
+    </form>
 </body>
 </html>

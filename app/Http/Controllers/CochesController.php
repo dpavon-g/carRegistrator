@@ -72,6 +72,8 @@ class CochesController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Coche::destroy($id);
+        $coches = Coche::all();
+        return view('coches', compact('coches'));
     }
 }
