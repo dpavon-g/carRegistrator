@@ -25,5 +25,13 @@
         @method('DELETE')
         <input type="submit" value="Borrar">
     </form>
+    <form action="{{ route('editarCoche', ['id' => $coche->id]) }}" method="POST">
+            @csrf
+            <input type="text" placeholder="Marca" name="marca">
+            <input type="text" placeholder="Modelo" name="modelo">
+            <input type="text" placeholder="Matricula" name="matricula">
+            <input type="text" placeholder="Dueño" name="owner">
+            <input type="submit" value="Editar coche">
+    </form>
 </body>
 </html>

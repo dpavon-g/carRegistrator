@@ -24,3 +24,4 @@ Route::post('/crearCoche', [CochesController::class, 'create'])->name('crearCoch
 
 Route::delete('/deleteCoche/{id}', [CochesController::class, 'destroy'])->name('deleteCoche');
 
+Route::post('/editarCoche/{id}', [CochesController::class, 'editCar'])->name('editarCoche');
