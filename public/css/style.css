@@ -1,5 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+:root {
+    --color-1: #88F26B;
+    --color-2: #7AD95F;
+    --color-3: #34592A;
+    --color-4: #66A649;
+    --color-5: #0D0D0D;
+    --color-6: #ccf0c2;
+}
+
 * {
+    font-family: "Exo 2", serif;
     padding: 0;
     margin: 0;
 }
 
+body {
+    font-family: "Exo 2", serif;
+    background-color: var(--color-6);
+}
+
+header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--color-2);
+    margin-bottom: 20px;
+}
+
+h1 a {
+    text-decoration: none;
+    color: var(--color-5);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.basicInput {
+    background-color: var(--color-2);
+    border: none;
+    color: var(--color-5);
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.basicInput:hover {
+    background-color: var(--color-5);
+    color: var(--color-2);
+}
+
+.basicInputText {
+    border: none;
+    padding: 5px;
+    padding-left: 10px;
+    background-color: var(--color-3);
+    font-weight: bold;
+    color: var(--color-1);
+    border-radius: 5px;
+}
+
+.basicInputText:focus {
+    outline: none;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.enlace {
+    background-color: var(--color-2);
+    font-weight: bold;
+    color: var(--color-5);
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.listaCoches {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.listaCoches ul {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.listaCoches h2 {
+    margin-bottom: 20px;
+}
+
+li {
+    list-style: none;
+}
+
+.acciones {
+    margin-top: 30px;
+    display: grid;
+    justify-content: center;
+}
+
+.acciones h2 {
+    margin-bottom: 10px;
+}
+
+.boton {
+    text-decoration: none;
+}
+
+.enlace:hover {
+    background-color: var(--color-5);
+    color: var(--color-2);
+}

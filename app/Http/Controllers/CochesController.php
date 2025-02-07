@@ -95,4 +95,20 @@ class CochesController extends Controller
         $coches = Coche::all();
         return view('coches', compact('coches'));
     }
+
+    public function buscar(Request $request)
+    {
+        return view('buscarCoches');
+    }
+
+    public function buscarCochesByMatricula(Request $request)
+    {
+        $request->validate([
+            'matricula' => 'required|string|max:8',
+        ]);
+
+        $coche = Coche::where('matricula', $request->matricula)->first();
+        return view('infoCoche', compact('coche'));
+    }
+
 }
