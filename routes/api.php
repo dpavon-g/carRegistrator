@@ -27,3 +27,5 @@ Route::delete('/deleteCoche/{id}', [CochesController::class, 'destroy'])->name('
 Route::post('/editarCoche/{id}', [CochesController::class, 'editCar'])->name('editarCoche');
 
 Route::post('/buscarCoches', [CochesController::class, 'buscarCochesByMatricula'])->name('buscarCochesByMatricula');
+
+Route::post('/buscarCochesFiltro', [CochesController::class, 'buscarCochesConFiltro'])->name('buscarCochesConFiltro');

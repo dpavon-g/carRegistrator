@@ -35,6 +35,8 @@
         <div class="acciones">
             <h2>Acciones</h2>
             <a class="enlace boton" href="{{ route('buscarCoches') }}">Buscar coches</a>
+            <h2>Filtrado</h2>
+            <a class="enlace boton" href="{{ route('filtrarCoches') }}">Filtrar coches</a>
         </div>
     </main>
 </body>

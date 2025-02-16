@@ -111,4 +111,22 @@ class CochesController extends Controller
         return view('infoCoche', compact('coche'));
     }
 
+    public function buscarCochesConFiltro(Request $request)
+    {
+        $query = Coche::query();
+        if ($request->has('marca')) {
+            $query->where('marca','like','%'.$request->marca.'%');
+        }
+        if ($request->has('modelo')) {
+            $query->where('modelo','like','%'.$request->modelo.'%');
+        }
+        $coches = $query->get();
+        return view ('filtrarCoches', compact('coches'));
+    }
+
+    public function filtrar(Request $request)
+    {
+        return view('filtrarCoches');
+    }
+
 }
